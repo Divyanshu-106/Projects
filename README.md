@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Projects
-=======
 # Projects Portfolio 🚀
 
 Welcome to my central repository!
@@ -22,4 +19,3 @@ Here are a few highlights of the applications I have developed:
 
 ## 📫 Let's Connect
 Feel free to explore the code, fork the repository, or reach out. I am currently focused on expanding my full-stack capabilities, mastering new React concepts, and continually optimizing my developer portfolio!
->>>>>>> 602053930312bb7a5ca4230c41aec6d031ca5bf6
