@@ -4,25 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divyanshu Choudhary - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <link rel="stylesheet" href="style.css">
-    <header class="abc">
+    <header>
         <nav class="navbar">
             <div class="logo">
                 <span>Divyanshu.</span>
             </div>
             <ul class="navlinks">
-                <li><a target="_blank" rel="noopener noreferrer" >Home</a></li>
-                <li><a href="/Projects 1/about.html" target="_blank" rel="noopener noreferrer" >About</a></li>
-               
-                <li><a href="/Projects 1/contact.html" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" target="_blank">About</a></li>
+                <li><a href="contact.html" target="_blank">Contact</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-          <section>
-                <section class="hero">
+        <section class="hero">
             <div class="content">
                 <h1>Hi, I'm <span class="highlight">Divyanshu Choudhary</span></h1>
                 <h2>Full Stack Web Developer</h2>
@@ -31,25 +30,43 @@
                     Passionate about clean code, modern web technologies, and 
                     creating seamless user experiences from the front-end to the back-end.
                 </p>
+                <div>
+                    <a href="contact.html" class="btn">Contact Me</a>
                 </div>
             </div>
-            <div>
-                <video autoplay loop src="videoplayback.mp4">Video</video>
+            <div class="video-box">
+                <video autoplay loop muted src="videoplayback.mp4">Video</video>
             </div>
-          </section>
-        </main>
-       <footer>
-  <div>
-    
-    <div class="footer-brand">
-      <span class="footer-logo">Divyanshu.</span>
-      <p class="footer-copyright">&copy; 2026 Divyanshu Choudhary. All rights reserved.</p>
-    </div>
+        </section>
 
-    <div class="footer-tagline">
-      Designed & Built with <span class="footer-heart">♥</span>
+        <section  class="projects-section">
+            <h2 class="section-title">My Recent Work</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-stack MERN application with user authentication, product management, and secure checkout.</p>
+                </div>
 
-  </div>
-</footer>
+                <div class="project-card">
+                    <h3>Social Media App</h3>
+                    <p>A responsive application built with React and Tailwind CSS, featuring real-time chat and dark mode.</p>
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo">Divyanshu.</span>
+                <p class="footer-copyright">&copy; 2026 Divyanshu Choudhary. All rights reserved.</p>
+            </div>
+            <div class="footer-tagline">
+                Designed & Built with <span class="footer-heart">♥</span>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
