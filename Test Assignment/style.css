@@ -1,197 +1,208 @@
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-  * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-  }
+:root {
+    --bg-color: beige;
+    --card-bg: white;
+    --text-primary: rgb(31, 41, 55);
+    --text-secondary: rgb(75, 85, 99);
+    --text-accent: rgb(59, 130, 246);
+    --border-color: rgb(229, 231, 235);
+    --avatar-border: rgb(243, 244, 246);
+    --tag-bg: rgb(229, 231, 235);
+    --tag-text: rgb(55, 65, 81);
+    --social-hover: rgb(243, 244, 246);
+    --btn-bg: rgb(59, 130, 246);
+    --btn-text: white;
+    --btn-hover: rgb(37, 99, 235);
+    --theme-btn-bg: white;
+}
 
-  body {
-      font-family: "Poppins", sans-serif;
-      font-weight: 500;
-      font-style: normal;
-      background-color: beige;
-      color: rgb(31, 41, 55);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 24px;
-  }
+body.force-dark {
+    --bg-color: rgb(17, 24, 39);
+    --card-bg: rgb(31, 41, 55);
+    --text-primary: rgb(249, 250, 251);
+    --text-secondary: rgb(156, 163, 175);
+    --text-accent: rgb(96, 165, 250);
+    --border-color: rgb(55, 65, 81);
+    --avatar-border: rgb(55, 65, 81);
+    --tag-bg: rgb(55, 65, 81);
+    --tag-text: rgb(229, 231, 235);
+    --social-hover: rgb(96, 165, 250);
+    --btn-bg: rgb(37, 99, 235);
+    --btn-hover: rgb(29, 78, 216);
+    --theme-btn-bg: rgb(31, 41, 55);
+}
 
-  .card {
-      background-color: white;
-      width: 100%;
-      max-width: 400px;
-      border-radius: 20px;
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-      padding: 32px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-  }
+@media (prefers-color-scheme: dark) {
+    body:not(.force-light) {
+        --bg-color: rgb(17, 24, 39);
+        --card-bg: rgb(31, 41, 55);
+        --text-primary: rgb(249, 250, 251);
+        --text-secondary: rgb(156, 163, 175);
+        --text-accent: rgb(96, 165, 250);
+        --border-color: rgb(55, 65, 81);
+        --avatar-border: rgb(55, 65, 81);
+        --tag-bg: rgb(55, 65, 81);
+        --tag-text: rgb(229, 231, 235);
+        --social-hover: rgb(96, 165, 250);
+        --btn-bg: rgb(37, 99, 235);
+        --btn-hover: rgb(29, 78, 216);
+        --theme-btn-bg: rgb(31, 41, 55);
+    }
+}
 
-  .avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 8px auto;
-      border: 4px solid rgb(243, 244, 246);
-  }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-  .name {
-      font-size: 24px;
-      margin-bottom: 4px;
-  }
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    min-height: 100vh;
+}
 
-  .role {
-      font-size: 16px;
-      color: rgb(59, 130, 246);
-      font-weight: normal;
-  }
+.card {
+    background-color: var(--card-bg);
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 32px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
-  .bio {
-      font-size: 15px;
-      color: rgb(75, 85, 99);
-      line-height: 24px;
-  }
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 8px auto;
+    border: 4px solid var(--avatar-border);
+}
 
-  .skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-  }
+.name {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
 
-  .skill-tag {
-      background-color: rgb(229, 231, 235);
-      color: rgb(55, 65, 81);
-      padding: 6px 16px;
-      border-radius: 32px;
-      font-size: 14px;
-  }
+.role {
+    font-size: 16px;
+    color: var(--text-accent);
+    font-weight: normal;
+}
 
-  .socials {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      border-top: 1px solid rgb(229, 231, 235);
-      padding-top: 24px;
-  }
+.bio {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 24px;
+}
 
-  .socials a {
-      color: rgb(75, 85, 99);
-      text-decoration: none;
-      font-size: 15px;
-      font-weight: bold;
-      transition: background-color 0.2s ease;
-  }
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
 
-  .socials a:hover {
-      background-color: rgb(243, 244, 246);
-  }
+.skill-tag {
+    background-color: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 6px 16px;
+    border-radius: 32px;
+    font-size: 14px;
+}
 
-  .contact-btn {
-      background-color: rgb(59, 130, 246);
-      color: white;
-      padding: 12px 24px;
-      border-radius: 8px;
-      border: none;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      width: 100%;
-      transition: background-color 0.2s ease;
-  }
+.socials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 24px;
+}
 
-  .contact-btn:hover {
-      background-color: rgb(37, 99, 235);
-  }
+.socials a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
 
-  @media (prefers-color-scheme: dark) {
-      body {
-          background-color: rgb(17, 24, 39);
-          color: rgb(249, 250, 251);
-      }
+.socials a:hover {
+    background-color: var(--social-hover);
+}
 
-      .card {
-          background-color: rgb(31, 41, 55);
-          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
-      }
+.contact-btn {
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 12px 24px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.2s ease;
+}
 
-      .avatar {
-          border-color: rgb(55, 65, 81);
-      }
+.contact-btn:hover {
+    background-color: var(--btn-hover);
+}
 
-      .name {
-          color: rgb(249, 250, 251);
-      }
+.theme-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: var(--theme-btn-bg);
+    border: 1px solid var(--border-color);
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
 
-      .role {
-          color: rgb(96, 165, 250);
-      }
+@media (max-width: 480px) {
+    body {
+        padding: 16px;
+    }
 
-      .bio {
-          color: rgb(156, 163, 175);
-      }
+    .card {
+        padding: 24px 16px;
+        gap: 20px;
+    }
 
-      .skill-tag {
-          background-color: rgb(55, 65, 81);
-          color: rgb(229, 231, 235);
-      }
+    .avatar {
+        width: 100px;
+        height: 100px;
+    }
 
-      .socials {
-          border-top-color: rgb(55, 65, 81);
-      }
+    .name {
+        font-size: 22px;
+    }
 
-      .socials a {
-          color: rgb(156, 163, 175);
-      }
+    .role {
+        font-size: 14px;
+    }
 
-      .socials a:hover {
-          background-color: rgb(96, 165, 250);
-      }
+    .bio {
+        font-size: 14px;
+        line-height: 22px;
+    }
 
-      .contact-btn {
-          background-color: rgb(37, 99, 235);
-      }
-
-      .contact-btn:hover {
-          background-color: rgb(29, 78, 216);
-      }
-  }
-
-  @media (max-width: 480px) {
-      body {
-          padding: 16px;
-      }
-
-      .card {
-          padding: 24px 16px;
-          gap: 20px;
-      }
-
-      .avatar {
-          width: 100px;
-          height: 100px;
-      }
-
-      .name {
-          font-size: 22px;
-      }
-
-      .role {
-          font-size: 14px;
-      }
-
-      .bio {
-          font-size: 14px;
-          line-height: 22px;
-      }
-
-      .skill-tag {
-          font-size: 13px;
-          padding: 4px 12px;
-      }
-  }
+    .skill-tag {
+        font-size: 13px;
+        padding: 4px 12px;
+    }
+}
