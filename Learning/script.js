@@ -2,7 +2,7 @@
 
 // let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 // document.getElementById("demo").innerHTML = text.length;
- 
+
 // var text = "HELLO WORLD";
 // document.getElementById("demo").innerHTML = text.charAt(0);
 
@@ -44,9 +44,8 @@
 // let str = "Apple, Banana, Kiwi";
 // document.getElementById("demo").innerHTML = str.substring(7, 13);
 
-
 // function myFunction() {
-//     let text = 
+//     let text =
 //     document.getElementById("demo").innerHTML;
 
 //     document.getElementById("demo").innerHTML = text.toUpperCase();
@@ -66,7 +65,7 @@
 // let text2 = text1.trim();
 
 // document.getElementById("demo").innerHTML = "Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
- 
+
 // let text1 = "       Hello World!        ";
 // let text2 = text1.trimEnd();
 
@@ -80,7 +79,7 @@
 // let text = numb.toString();
 // document.getElementById("demo").innerHTML = text.padStart(4,"0");
 
-// let text = " HELLO WORLD! ";   
+// let text = " HELLO WORLD! ";
 // let result = text.repeat(3);
 
 // document.getElementById("demo").innerHTML = result;
@@ -121,7 +120,7 @@
 
 // let myNumber = 32;
 
-// document.getElementById("demo").innerHTML = 
+// document.getElementById("demo").innerHTML =
 // "Decimal 32 =" + "<br><br>" +
 // "Hexatrigesimal (base 36): " + myNumber.toString(36) + "<br>" +
 // "Duotrigesimal (base 32): " + myNumber.toString(32) + "<br>" +
@@ -130,7 +129,6 @@
 // "Decimal (base 10): " + myNumber.toString(10) + "<br>" +
 // "Octal (base 8): " + myNumber.toString(8) + "<br>" +
 // "Binary (base 2): " + myNumber.toString(2);
-
 
 // let x = 123;
 // let y = new Number(123);
@@ -147,3 +145,124 @@
 //   x.toString() + "<br>" +
 //    (123).toString() + "<br>" +
 //    (100 + 23).toString();
+
+// let x = 123;
+// let text = x.toString(2); 
+// document.getElementById("demo").innerHTML = text;
+
+// let x = 9.656;
+// document.getElementById("demo").innerHTML =
+//     x.toExponential() + "<br>" +
+//     x.toExponential(2) + "<br>" +
+//     x.toExponential(4) + "<br>" +
+//     x.toExponential(6);
+
+// let x = 123;
+
+// document.getElementById("demo").innerHTML = 
+//   x.valueOf() + "<br>" +
+//   (123).valueOf() + "<br>" +
+//   (100 + 23).valueOf();
+
+// let x = new Date("1970-01-02");
+// document.getElementById("demo").innerHTML = Number(x);
+
+// JS Function
+
+// function sayHello() {
+//     return "Hello World!";
+// }
+// let greeting = sayHello();
+// document.getElementById("demo").innerHTML = greeting;
+
+// function multiply(a, b) {
+//     return a * b;
+// }
+// let result = multiply(4, 3);
+// document.getElementById("demo").innerHTML = "The Result is: " + result;
+
+
+// function add (a, b) {
+//     return a + b;
+// }
+// let sum1 = add(5, 10);
+// let sum2 = add(20, 30);
+// document.getElementById("demo").innerHTML = "The Sum of 5 and 10 is: " + sum1 + "<br>" +
+// "The Sum of 20 and 30 is: " + sum2;
+
+// let text = "Outside:" + typeof carName;
+// document.getElementById("demo").innerHTML = text;
+
+// function myFunction() {
+//     let carName = "Volvo";
+//     let text = "Inside: " + typeof carName;
+//     document.getElementById("demo").innerHTML =  text;
+// }
+
+// let text = "The temperauture is " + toCelsius(77) + " Celsius";
+// document.getElementById("demo").innerHTML = text;
+
+// function toCelsius(fahrenheit) {
+//     return (5/9) * (fahrenheit-32);
+// }
+
+// function sayHello(){
+//     return "Hello World!";
+// }
+
+// let greeting = sayHello();
+// document.getElementById("demo").innerHTML = greeting;
+
+// function myFunction() {
+//     return "Hello World!";
+// }
+
+// let a = sayHello();
+// let b = sayHello();
+// let c = sayHello();
+
+// function sayHello() {
+//     return "Hello World!";
+// }
+// function sayHello() {
+//     document.getElementById("demo").innerHTML = sayHello();
+// }
+
+// function sayHello() {
+//   return "Hello World";
+// }
+
+// function showHello() {
+//   document.getElementById("demo").innerHTML = sayHello();
+// }
+
+// function fullName(firstName, lastName) {
+//     return firstName + " " + lastName;
+// }
+// let name = fullName("John", "Doe");
+
+// document.getElementById("demo").innerHTML = "The name is: " + name;
+
+// function multiply(a, b) {
+//     return "Done";
+
+//     return a * b;
+// }
+// let result = multiply(4, 3);
+// document.getElementById("demo").innerHTML = "The Result is: " + result;
+
+// function checkAge(age) {
+//     if (age < 18) {
+//         return "Too young";
+//     } else {
+//         return "Old enough";
+//     }
+//     asnwer = checkAge(15);
+//     document.getElementById("demo").innerHTML = answer;
+// }
+
+// function multiply(a, b) {
+//     return a * b;
+// }
+// let result = multiply(4, 3);
+// document.getElementById("demo").innerHTML = "The Result is: " + result;
