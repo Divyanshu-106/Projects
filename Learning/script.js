@@ -266,3 +266,256 @@
 // }
 // let result = multiply(4, 3);
 // document.getElementById("demo").innerHTML = "The Result is: " + result;
+
+// function findMax(){
+//     let max = -Infinity;
+//     for (let i = 0; i < arguments.length; i++) {
+//         if (arguments[i] > max) {
+//             max = arguments[i];
+//         }
+//     }
+//     return max;
+// }
+
+// document.getElementById("demo").innerHTML = "The Max Number is: " + findMax(5, 10, 15, 20, 25);
+
+// function sumAll(){
+//     let sum = 0;
+//     for (let i = 0; i < arguments.length; i++) {
+//         sum += arguments[i];
+//     }
+//     return sum;
+// }
+
+// document.getElementById("demo").innerHTML = "The Sum is: " + sumAll(5, 10, 15, 20, 25);
+
+// function subtract(a, b) {
+//   return a - b;
+// }
+
+// let x1 = subtract(10, 5);
+// let x2 = subtract(5, 10);
+
+// document.getElementById("demo").innerHTML = "The results are " + x1 + " and " + x2;
+
+
+// function toCelsius(farenheit) {
+//   return (5/9) * (farenheit-32);
+// }
+
+// let value = toCelsius("John");
+
+// document.getElementById("demo").innerHTML = value;
+
+// function myFunction(x, y) {
+//   if (y === undefined) {
+//     y = 2;
+//   }  
+//   return x * y;
+// }
+// document.getElementById("demo").innerHTML = myFunction(4);
+
+// function myFunction(x, y = 10) {
+//   return x + y;
+// }
+// document.getElementById("demo").innerHTML = myFunction(5);
+
+
+//  // 1. Define a function and use the rest parameter (...args) to gather all inputs into an array
+// function calculateSum(...args) {
+//   let sum = 0;
+  
+//   // 2. Loop through the array of arguments
+//   for (let arg of args) { 
+//     sum += arg;
+//   } // <-- 3. Added the missing closing bracket for the loop
+
+//   // 4. Return the final total after the loop finishes
+//   return sum;
+// }
+
+// // 5. Call the new function and pass in your numbers
+// let x = calculateSum(4, 9, 16, 25, 29, 100, 66, 77);
+
+// // Output the result to the HTML element
+// document.getElementById("demo").innerHTML = x;
+
+// const multiply = function(a, b) {return a * b};
+
+// let result = multiply(4, 3);
+
+// document.getElementById("demo").innerHTML = "The product is: " + result;
+
+// const myFunction = (x, y) => { return x * y };
+
+// let result = myFunction(5, 4);
+
+// document.getElementById("demo").innerHTML = "The product is: " + result;
+
+// const car = {
+//   type:"Fiat",
+//   model:"500",
+//   color:"white"
+// };
+
+// // Display Data from the Object:
+// document.getElementById("demo").innerHTML = "The car type is " + car.type;
+
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   age: 50,
+//   fullName: function() {
+//     return this.firstName + " " + this.lastName;
+//   }
+// };
+
+// document.getElementById("demo").innerHTML = person.fullName();
+
+// const person = {
+//   firstName: "John",
+//   lastName : "Doe",
+//   age      :  50
+// };
+
+// let result = ("firstName" in person);
+
+// document.getElementById("demo").innerHTML = result; /
+
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   id: 5566,
+//   getId: function() {
+//     return this.id;
+//   }
+// };
+
+// let number = person.getId();
+
+// document.getElementById("demo").innerHTML = "The number is " + number;
+
+// // Create an Object
+// const person = {
+//   firstName: "John",
+//   lastName: "Doe",
+//   id: 5566,
+// };
+
+// // Add a Method
+// person.name = function() {
+//   return (this.firstName + " " + this.lastName).toUpperCase();
+// };
+
+// // Display Object Data
+// document.getElementById("demo").innerHTML =
+// "My father is " + person.name();
+
+
+// const person1 = {
+//   name: "John",
+//   hello: function() {
+//     return "Hello " + this.name;
+//   }
+// };
+
+// const person2 = {
+//   name: "Anna",
+//   hello: function() {
+//     return "Hello " + this.name;
+//   }
+// };
+
+// document.getElementById("demo").innerHTML = person1.hello();
+
+// let x = this;
+
+// document.getElementById("demo").innerHTML = "This is: " + x;
+
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// // Display Object
+// let text = person;
+
+// document.getElementById("demo").innerHTML = text;
+
+// Create an Object
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// // Build a Text
+// let text = "";
+// for (let x in person) {
+//   text += person[x] + " ";
+// };
+
+// // Display the Text
+// document.getElementById("demo").innerHTML = text;
+
+// const fruits = {Bananas:300, Oranges:200, Apples:500}; 
+
+// let text = "";
+// for (let [fruit, amount] of Object.entries(fruits)) {
+//   text += fruit + ": " + amount + "<br>";
+// }
+
+// document.getElementById("demo").innerHTML = text;
+
+// const person = {
+//   name: "John",
+//   age: 30,
+//   city: "New York"
+// };
+
+// // Display JSON
+// let text = JSON.stringify(person);
+
+// document.getElementById("demo").innerHTML = text; 
+
+// // Constructor Function for Person objects
+// function Person(first, last, age, eye) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   this.age = age;
+//   this.eyeColor = eye;
+// }
+
+// // Create a Person object
+// const myFather = new Person("John", "Doe", 50, "blue");
+
+// // Display age
+// document.getElementById("demo").innerHTML =
+// "My father is " + myFather.age + "."; 
+
+
+// Constructor Function for Person objects
+// function Person(first, last, age, eye) {
+//   this.firstName = first;
+//   this.lastName = last;
+//   this.age = age;
+//   this.eyeColor = eye;
+//   this.fullName = function() {
+//     return this.firstName + " " + this.lastName
+//   };
+// }
+
+// // Create a Person object
+// const myFather = new Person("John", "Doe", 50, "blue");
+
+// // Display full name
+// document.getElementById("demo").innerHTML =
+// "My father is " + myFather.fullName(); 
+
+
+// x = 5;
+//  elem = document.getElementById("demo");
+//  elem.innerHTML = "The value of x is: " + x;
+
+//  var x;
