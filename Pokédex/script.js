@@ -20,7 +20,7 @@ const typeColors = {
 };
 
 let offset = 0;
-const limit = 20;
+const limit = 40;
 
 const grid = document.getElementById("grid");
 const loadingMsg = document.getElementById("loading-msg");
@@ -43,10 +43,10 @@ async function loadPokemon() {
     const poke = await fetch(item.url).then((r) => r.json());
     addCard(poke);
   }
+
   loadingMsg.style.display = "none";
   if (data.next) loadMoreBtn.style.display = "block";
 }
-
 function addCard(poke) {
   const types = poke.types.map((t) => t.type.name);
   const img =
@@ -67,5 +67,115 @@ function addCard(poke) {
   card.addEventListener("click", () => openDetail(poke.id));
   grid.appendChild(card);
 }
+
+searchBox.addEventListener("input", async () => {
+  const query = searchBox.value.trim().toLowerCase();
+
+  if (!query) {
+    grid.innerHTML = "";
+    offset = 0;
+    await loadPokemon();
+    return;
+  }
+
+  try {
+    grid.innerHTML = "";
+    loadingMsg.style.display = "block";
+    loadMoreBtn.style.display = "none";
+    const poke = await fetch(`https://pokeapi.co/api/v2/pokemon/${query}`).then(
+      (r) => r.json(),
+    );
+    loadingMsg.style.display = "none";
+    addCard(poke);
+  } catch {
+    loadingMsg.textContent = "No Pokémon found!";
+    loadingMsg.style.display = "block";
+  }
+});
+
+async function openDetail(id) {
+  listPage.style.display = "none";
+  detailPage.style.display = "block";
+  window.scrollTo(0, 0);
+
+  const poke = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`).then(
+    (r) => r.json(),
+  );
+  const spec = await fetch(
+    `https://pokeapi.co/api/v2/pokemon-species/${id}`,
+  ).then((r) => r.json());
+
+  const types = poke.types.map((t) => t.type.name);
+  const img =
+    poke.sprites.other["official-artwork"].front_default ||
+    poke.sprites.front_default;
+
+  document.getElementById("d-img").src = img;
+  document.getElementById("d-name").textContent = poke.name;
+  document.getElementById("d-number").textContent =
+    `#${String(poke.id).padStart(3, "0")}`;
+  document.getElementById("d-types").innerHTML = types
+    .map(
+      (t) =>
+        `<span class="type" style="background:${typeColors[t] || "#aaa"}">${t}</span>`,
+    )
+    .join("");
+
+  const entry = spec.flavor_text_entries.find((e) => e.language.name === "en");
+  document.getElementById("d-desc").textContent = entry
+    ? entry.flavor_text.replace(/\f/g, " ")
+    : "";
+
+  document.getElementById("d-height").textContent =
+    `${(poke.height / 10).toFixed(1)} m`;
+  document.getElementById("d-weight").textContent =
+    `${(poke.weight / 10).toFixed(1)} kg`;
+  document.getElementById("d-xp").textContent = poke.base_experience ?? "–";
+
+  const statsEl = document.getElementById("d-stats");
+  statsEl.innerHTML = "";
+  const statColors = [
+    "#e74c3c",
+    "#e67e22",
+    "#3498db",
+    "#2ecc71",
+    "#9b59b6",
+    "#1abc9c",
+  ];
+  poke.stats.forEach((s, i) => {
+    const pct = Math.round((s.base_stat / 255) * 100);
+    statsEl.innerHTML += `
+        <div class="stat">
+          <div class="stat-name">${s.stat.name}</div>
+          <div class="stat-val">${s.base_stat}</div>
+          <div class="stat-bar-bg">
+            <div class="stat-bar-fill" style="width:0%;background:${statColors[i]}" data-pct="${pct}"></div>
+          </div>
+        </div>
+      `;
+  });
+
+  setTimeout(() => {
+    document.querySelectorAll(".stat-bar-fill").forEach((bar) => {
+      bar.style.width = bar.dataset.pct + "%";
+    });
+  }, 100);
+
+  const abEl = document.getElementById("d-abilities");
+  abEl.innerHTML = poke.abilities
+    .map(
+      (a) =>
+        `<span class="type" style="background:#888;margin:3px">${a.ability.name}</span>`,
+    )
+    .join("");
+}
+
+document.getElementById("back-btn").addEventListener("click", () => {
+  detailPage.style.display = "none";
+  listPage.style.display = "block";
+  window.scrollTo(0, 0);
+});
+
+loadMoreBtn.addEventListener("click", loadPokemon);
 
 loadPokemon();
