@@ -883,11 +883,443 @@
 // console.log("Hello");
 //  },2000)
 
-let count = 10;
+// let count = 10;
 
-let interval = setInterval(function(){
- if(count >= 1){
-  count--;
- console.log(count);
-} else clearInterval(interval);
-}, 1000)
+// let interval = setInterval(function(){
+//  if(count >= 1){
+//   count--;
+//  console.log(count);
+// } else clearInterval(interval);
+// }, 1000)
+
+// let pr = new Promise(function(res,rej){
+//     setTimeout(() => {
+//        let rn = Maths.floor(Math.random()*10)
+//        if(rn>5){
+//          res(rn);
+//        }else rej(rn);
+//     }, 3000);
+// })
+
+// pr
+// .then(function(val){
+// console.log(val)
+// })
+// .catch(function (val) {
+//     console.log(val)
+// })
+// async function getMyData() {
+//   try {
+//     // 1. Send the request
+//     const response = await fetch('https://api.example.com/data');
+
+//     // 2. Check if the request was successful
+//     if (!response.ok) {
+//       throw new Error(`HTTP error! status: ${response.status}`);
+//     }
+
+//     // 3. Parse the data as JSON
+//     const data = await response.json();
+
+//     // 4. Use the data
+//     console.log(data);
+//   } catch (error) {
+//     // 5. Handle any errors
+//     console.error('There was an error:', error);
+//   }
+// }
+
+// function memoize(fn) {
+//   const cache = {};
+
+//   return function(n){
+//     if (cache[n] !== undefined){
+//         return cache[n]
+//     }
+//     const result = fn(n);
+//     cache[n] = result;
+
+//     return result;
+//   };
+// }
+
+// const slowSquare = (n) => {
+//     return n * n;
+// }
+// const fastSquare = memoize(slowSquare);
+
+// console.log(fastSquare(5));
+// console.log(fastSquare(5));
+
+// getMyData();
+
+// function checkOddEven(number) {
+//   if (number % 2 === 0) {
+//     return `${number} is an Even number.`;
+//   } else {
+//     return `${number} is an Odd number.`;
+//   }
+// }
+
+// console.log(checkOddEven(14));
+// console.log(checkOddEven(3));
+
+// const name = "DC";
+// console.log(name)
+
+// var name = "DC";
+// console.log(name)
+
+// let name = "PJ";
+// name = "DC";
+// console.log(name)
+
+// const place = "dewas"
+// console.log(place)
+
+// let name = "DC";
+// console.log(name)
+
+// let age = "25";
+// console.log(age)
+
+// let thought = true;
+// console.log(thought)
+
+// let city ;
+// console.log(city)
+
+// let data = null;
+// console.log(data)
+
+// let num = 100;
+
+// console.log(String(num))
+
+// let name = "Aman";
+// let age = 22;
+
+// console.log(`my name is ${name} and age is ${age}`)
+
+// function oddEven(num) {
+
+//   if (num  % 2 === 0) {
+//     console.log(`the num ${num} is even`);
+//   } else {
+//     console.log(`the num ${num} is odd`);
+//   }
+// }
+// oddEven(2)
+// oddEven(9)
+
+// odd even
+// let num = 1;
+//  if (num % 2 === 0){
+//     console.log(`${num} is even`)
+//  }else{
+//     console.log(`${num} is odd`)
+//  }
+
+//Largest of Three Numbers
+// let a = 25;
+// let b = 40;
+// let c = 15;
+
+// if (a >= b && a >= c) {
+//   console.log("The largest is a:" + a);
+// } else if (b >= a && b >= c) {
+//   console.log("The largest is b:" + b);
+// } else {
+//   console.log("The largest is c:" + c);
+// }
+
+//Swap Two Numbers
+// let x = 5;
+// let y = 10;
+
+// console.log("Before swap: x=" + x + ", y=" + y);
+
+// let temp = x;
+// x = y;
+// y = temp;
+
+// console.log("After swap: x=" + x + ", y=" + y);
+
+//sum of numbers
+
+// let limit = 5;
+// let totalSum = 0;
+
+// for(let i =1; 1 <= limit;i++){
+//     totalSum = totalSum + i;
+// }
+
+// console.log(`the sum of numbers from 1 to ${limit} is : ${totalSum}`)
+
+// let marks = 91;
+
+// if(marks >= 90){
+//     console.log("A")
+// }else if(marks >= 70){
+//     console.log("b")
+// }else{
+//     console.log("C")
+// }
+
+// let age = 22;
+// let hasID = true;
+
+// if(age >= 18){
+//     if(hasID){
+//       console.log("allowed");
+//     }
+// }
+
+// for(let i = 1; i <= 5; i++){
+//     console.log(i)
+// }
+
+// let i =1;
+
+//  do{
+//     console.log(i);
+//     i++;
+// }
+// while (i <= 5)
+
+// for(let i =1; i <= 10; i++){
+//     if(i === 5){
+//         break;
+//     }
+//     console.log(i);
+// }
+
+// function abc(){
+//     console.log("hello");
+// }
+// abc()
+
+// function multiply(a, b) {
+//   return a * b;
+// }
+// let result = multiply(2, 3);
+
+// console.log(result);
+
+// const abc = function(){
+//     console.log("hello");
+// };
+// abc()
+
+// const add = (a,b) => {
+//     return a + b;
+// };
+// console.log(add(2,3));
+
+// let name = "Rishi";
+
+// function test() {
+//   console.log(name);
+// }
+// test()
+
+// function test() {
+//     let age = 20;
+//     console.log(age);
+//     }
+// test()/
+
+// function add(a, b){
+//     return a + b;
+// }
+// console.log(add(10,20));
+
+// function check(num) {
+//   if (num % 2 === 0) {
+//     return "even";
+//   } else {
+//     return "odd";
+//   }
+// }
+
+// console.log(check(8));
+
+// function abc(n) {
+//   let fact = 1;
+
+//   for (let i = 1; i <= n; i++) {
+//     fact *= i;
+//   }
+//   return fact;
+// }
+// console.log(abc(4));
+
+// let a = 0;
+// let b = 1;
+
+// for(let i = 1; i <= 5; i++){
+
+//    console.log(a);
+
+//    let temp = a + b;
+//    a = b;
+//    b = temp;
+// }
+
+// let num = 1234;
+// let reverse = 0;
+
+// while (num > 0) {
+//   let digit = num % 10;
+
+//   reverse = reverse * 10 + digit;
+
+//   num = Math.floor(num / 10);
+// }
+
+// console.log(reverse);
+
+// let num = 5;
+
+// for (let i = 1; i <= 50; i++) {
+//   console.log(`${num} x ${i} = ${num * i}`);
+// }
+
+// let arr = [10, 50, 90, 30, 70];
+
+// let large = arr[0];
+
+// for(let i = 1; 1 < arr.length; i++){
+
+//     if(arr[i] > large){
+//         large = arr[i];
+//     }
+// }
+// console.log(large)
+
+// let arr = [1,2,3,4,5,6,7];
+
+// console.log(arr.slice(0,4));
+
+// let arr =[1,4]
+
+// arr.splice(1,0,2,3)
+// console.log(arr)
+
+// let arr = [1,2,3];
+
+// arr.forEach(function(item){
+//     console.log(item)
+// })
+
+// // let dr = arr.sort(function (a, b) {
+// //   return b - a;
+// // });
+// // console.log(dr);
+
+// let dr = arr.map(function(val){
+//     return val
+// })
+
+// let arr = [1, 5, 90, 54, 2, 3];
+
+// // let newArr = arr.filter(function (val) {
+// //   if (val > 3) return val;
+// // });
+// // console.log(newArr);
+
+// let newArr = arr.reduce(function(abc ,val){
+//     return abc + val
+// },01)
+
+// console.log(newArr)
+
+// let str = "  hello  ";
+
+// console.log(str.trim());
+
+// let str = "a,b,c";
+
+// console.log(str.split(","));
+
+// let arr = ["a", "b", "c"];
+
+// console.log(arr.join("-"));
+
+// let student = {
+//    name: "Rishi",
+//    age: 22,
+//    city: "Indore"
+// };
+
+// let person = {
+//    name: "Rishi",
+
+//    greet: function(){
+//       console.log("Hello");
+//    }
+// };
+
+// person.greet();
+
+// let student = {
+//   name: "DC",
+//   age: 22,
+// };
+
+// let { name, age } = student;
+
+// console.log(name);
+// console.log(age);
+
+// let arr1 = [1, 2];
+// let arr2 = [...arr1, 3, 4];
+
+// console.log(arr2);
+
+// let str = "121";
+
+// let reverse = str.split("").reverse().join("")
+
+// console.log(str === reverse)
+
+// let str = "divyanshu"
+
+// let count = 0
+
+// for(let val of str){
+//     if("aeiou".includes(val)){
+//         count++
+//     }
+// }
+// console.log(count)
+
+// let arr = [1, 2, 3, 2, 4, 1];
+
+// // let dup = [];
+// // for (let i = 0; i < arr.length; i++) {
+// //   for (let j = i + 1; j < arr.length; j++) {
+// //     if (arr[i] === arr[j]) {
+// //       if (!dup.includes(arr[i])) {
+// //         dup.push(arr[i]);
+// //       }
+// //     }
+// //   }
+// // }
+
+// // console.log(dup)
+
+// let uni = [...new Set(arr)];
+
+// console.log(uni)
+
+let stu = {
+  name: "Rishi",
+  age: 22,
+  city: "Indore",
+};
+
+let stu2 = {
+  ...stu,
+  surname: "patel",
+};
